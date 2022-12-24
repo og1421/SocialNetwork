@@ -14,6 +14,10 @@
 		8511D7A329565ED500A8F12B /* SocialNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511D7A229565ED500A8F12B /* SocialNetworkTests.swift */; };
 		8511D7AD29565ED500A8F12B /* SocialNetworkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511D7AC29565ED500A8F12B /* SocialNetworkUITests.swift */; };
 		8511D7AF29565ED500A8F12B /* SocialNetworkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511D7AE29565ED500A8F12B /* SocialNetworkUITestsLaunchTests.swift */; };
+		8511D7BE295661D900A8F12B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511D7BD295661D900A8F12B /* User.swift */; };
+		8511D7C229566A7300A8F12B /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511D7C129566A7300A8F12B /* Bundle-Decodable.swift */; };
+		8511D7C62956745D00A8F12B /* UserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511D7C52956745D00A8F12B /* UserList.swift */; };
+		8511D7C82956746A00A8F12B /* UserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511D7C72956746A00A8F12B /* UserDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,10 @@
 		8511D7A829565ED500A8F12B /* SocialNetworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialNetworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8511D7AC29565ED500A8F12B /* SocialNetworkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialNetworkUITests.swift; sourceTree = "<group>"; };
 		8511D7AE29565ED500A8F12B /* SocialNetworkUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialNetworkUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8511D7BD295661D900A8F12B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8511D7C129566A7300A8F12B /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
+		8511D7C52956745D00A8F12B /* UserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserList.swift; sourceTree = "<group>"; };
+		8511D7C72956746A00A8F12B /* UserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +103,9 @@
 		8511D78F29565ED200A8F12B /* SocialNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				8511D7BC2956618400A8F12B /* View */,
+				8511D7BB2956616400A8F12B /* Model */,
 				8511D79029565ED200A8F12B /* SocialNetworkApp.swift */,
-				8511D79229565ED200A8F12B /* ContentView.swift */,
 				8511D79429565ED400A8F12B /* Assets.xcassets */,
 				8511D79629565ED400A8F12B /* SocialNetwork.entitlements */,
 				8511D79729565ED400A8F12B /* Preview Content */,
@@ -127,6 +136,25 @@
 				8511D7AE29565ED500A8F12B /* SocialNetworkUITestsLaunchTests.swift */,
 			);
 			path = SocialNetworkUITests;
+			sourceTree = "<group>";
+		};
+		8511D7BB2956616400A8F12B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8511D7BD295661D900A8F12B /* User.swift */,
+				8511D7C129566A7300A8F12B /* Bundle-Decodable.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8511D7BC2956618400A8F12B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8511D79229565ED200A8F12B /* ContentView.swift */,
+				8511D7C52956745D00A8F12B /* UserList.swift */,
+				8511D7C72956746A00A8F12B /* UserDetail.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +287,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8511D7C62956745D00A8F12B /* UserList.swift in Sources */,
+				8511D7C82956746A00A8F12B /* UserDetail.swift in Sources */,
 				8511D79329565ED200A8F12B /* ContentView.swift in Sources */,
 				8511D79129565ED200A8F12B /* SocialNetworkApp.swift in Sources */,
+				8511D7C229566A7300A8F12B /* Bundle-Decodable.swift in Sources */,
+				8511D7BE295661D900A8F12B /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
