@@ -9,28 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     
-    let users: [User] = await fetchData()
+    @State private var users: [User] = []
 
     
     var body: some View {
         VStack {
-            ListLayout(users: users)
+//            ListLayout(users: users)
+//                .onAppear(perform: fetchData)
             
-//            Button("Teste") {
-//                Task{
-//                    await fetchData()
-//                }
-//            }
-//            .padding()
             
+            List(users) { user in
+                Text(user.name)
+            }
         }
         .padding()
     }
     
-    func fetchData() async {
-        guard let url = URL(string: "https://www.hackingwithswift.com/samples/friendface.json") else{
-            return
-        }
+    func fetchData() {
+        let url = URL(string: "https://www.hackingwithswift.com/samples/friendface.json")!
         
         let task = URLSession.shared.dataTask(with: url){ data, response, error in
             if let data = data, let response = response as? HTTPURLResponse{
@@ -43,7 +39,9 @@ struct ContentView: View {
                     
                     do {
                         let user = try decoder.decode([User].self, from: data)
-                        print(user)
+                        DispatchQueue.main.async {
+                            self.users = user
+                        }
                         
                     } catch {
                         print(error)
