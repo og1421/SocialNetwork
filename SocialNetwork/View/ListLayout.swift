@@ -13,11 +13,10 @@ struct ListLayout: View {
     var body: some View {
         ForEach(users) { user in
             NavigationLink{
-                Text("teste")
+                UserDetail(id: user.id)
             } label: {
                 VStack{
                     Text(user.name)
-                        .font(.headline)
                     
                     user.isActive == true ? Text("Online") : Text("Offline")
                         .font(.caption)
@@ -27,3 +26,7 @@ struct ListLayout: View {
         }
     }
 }
+        
+//        List(users) { user in
+//            Text(user.name)
+//        }

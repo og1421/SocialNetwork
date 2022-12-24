@@ -14,13 +14,14 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-//            ListLayout(users: users)
-//                .onAppear(perform: fetchData)
+            ListLayout(users: users)
+                .onAppear(perform: fetchData)
             
             
-            List(users) { user in
-                Text(user.name)
-            }
+//            List(users) { user in
+//                Text(user.name)
+//            }
+//            .onAppear(perform: fetchData)
         }
         .padding()
     }
@@ -36,8 +37,9 @@ struct ContentView: View {
 //                    let formatter = DateFormatter()
 //                    formatter.dateFormat = "y-MM-dd"
 //                    decoder.dateDecodingStrategy = .formatted(formatter)
-                    
+                    print("antes do decoder")
                     do {
+                        print("Entrei no do")
                         let user = try decoder.decode([User].self, from: data)
                         DispatchQueue.main.async {
                             self.users = user
