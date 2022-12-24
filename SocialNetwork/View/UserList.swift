@@ -8,13 +8,22 @@
 import SwiftUI
 
 struct UserList: View {
+    let name:String
+    let isActive: Bool
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack (alignment: .leading) {
+            Text("\(name)")
+                .font(.headline)
+            
+            isActive == true ? Text("Online") : Text("Offline")
+                .foregroundColor(isActive == true ? .green : .secondary)
+        }
     }
 }
 
-struct UserList_Previews: PreviewProvider {
-    static var previews: some View {
-        UserList()
-    }
-}
+//struct UserList_Previews: PreviewProvider {
+//    static var previews: some View {
+//        UserList()
+//    }
+//}

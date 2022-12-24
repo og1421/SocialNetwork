@@ -9,17 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var confirmationMessage = ""
-    @State private var showingConfirmation = false
-    @State private var titleAlert = "Thank you"
+    let users: [User] = await fetchData()
+
     
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            ListLayout(users: users)
             
+//            Button("Teste") {
+//                Task{
+//                    await fetchData()
+//                }
+//            }
+//            .padding()
             
         }
         .padding()
@@ -30,13 +32,30 @@ struct ContentView: View {
             return
         }
         
-        do {
-            
-        } catch {
-            titleAlert = "Alert"
-            confirmationMessage = "Loading data is failed"
-            showingConfirmation = true
+        let task = URLSession.shared.dataTask(with: url){ data, response, error in
+            if let data = data, let response = response as? HTTPURLResponse{
+                if response.statusCode == 200 {
+                    
+                    let decoder = JSONDecoder()
+//                    let formatter = DateFormatter()
+//                    formatter.dateFormat = "y-MM-dd"
+//                    decoder.dateDecodingStrategy = .formatted(formatter)
+                    
+                    do {
+                        let user = try decoder.decode([User].self, from: data)
+                        print(user)
+                        
+                    } catch {
+                        print(error)
+                    }
+                } else {
+                    print("API returned a non-200 response: \(response.statusCode)")
+                }
+            } else {
+                print("No data or invalid response received from the API")
+            }
         }
+        task.resume()
         
     }
 }

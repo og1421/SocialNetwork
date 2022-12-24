@@ -21,12 +21,12 @@ struct User: Codable, Identifiable{
     let email: String
     let address: String
     let about: String
-    let registered: Date?
+    let registered: String
     let tags: [String]
     let friends: [Friends]
     
-    var formattedLaucher: String {
-        registered?.formatted(date: .abbreviated, time: .omitted) ?? "N/A"
-    }
+//    var formattedLaucher: String {
+//        registered?.formatted(date: .abbreviated, time: .omitted) ?? "N/A"
+//    }
     
 }

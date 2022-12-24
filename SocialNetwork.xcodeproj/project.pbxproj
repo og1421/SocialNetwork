@@ -18,6 +18,7 @@
 		8511D7C229566A7300A8F12B /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511D7C129566A7300A8F12B /* Bundle-Decodable.swift */; };
 		8511D7C62956745D00A8F12B /* UserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511D7C52956745D00A8F12B /* UserList.swift */; };
 		8511D7C82956746A00A8F12B /* UserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511D7C72956746A00A8F12B /* UserDetail.swift */; };
+		8511D7CA2957787600A8F12B /* ListLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511D7C92957787600A8F12B /* ListLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		8511D7C129566A7300A8F12B /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		8511D7C52956745D00A8F12B /* UserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserList.swift; sourceTree = "<group>"; };
 		8511D7C72956746A00A8F12B /* UserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetail.swift; sourceTree = "<group>"; };
+		8511D7C92957787600A8F12B /* ListLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 				8511D79229565ED200A8F12B /* ContentView.swift */,
 				8511D7C52956745D00A8F12B /* UserList.swift */,
 				8511D7C72956746A00A8F12B /* UserDetail.swift */,
+				8511D7C92957787600A8F12B /* ListLayout.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8511D7C62956745D00A8F12B /* UserList.swift in Sources */,
+				8511D7CA2957787600A8F12B /* ListLayout.swift in Sources */,
 				8511D7C82956746A00A8F12B /* UserDetail.swift in Sources */,
 				8511D79329565ED200A8F12B /* ContentView.swift in Sources */,
 				8511D79129565ED200A8F12B /* SocialNetworkApp.swift in Sources */,
