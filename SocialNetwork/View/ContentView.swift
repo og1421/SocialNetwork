@@ -13,15 +13,11 @@ struct ContentView: View {
 
     
     var body: some View {
-        VStack {
+        NavigationView{
             ListLayout(users: users)
                 .onAppear(perform: fetchData)
+                .navigationTitle("SocialMedia")
             
-            
-//            List(users) { user in
-//                Text(user.name)
-//            }
-//            .onAppear(perform: fetchData)
         }
         .padding()
     }
@@ -34,12 +30,11 @@ struct ContentView: View {
                 if response.statusCode == 200 {
                     
                     let decoder = JSONDecoder()
-//                    let formatter = DateFormatter()
-//                    formatter.dateFormat = "y-MM-dd"
+//                    let formatter = ISO8601DateFormatter()
+//                    formatter.formatOptions = [.withFullDate]
 //                    decoder.dateDecodingStrategy = .formatted(formatter)
-                    print("antes do decoder")
+
                     do {
-                        print("Entrei no do")
                         let user = try decoder.decode([User].self, from: data)
                         DispatchQueue.main.async {
                             self.users = user

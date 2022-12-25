@@ -11,17 +11,22 @@ struct ListLayout: View {
     let users: [User]
     
     var body: some View {
-        ForEach(users) { user in
+        List(users) { user in
             NavigationLink{
-                UserDetail(id: user.id)
+                UserDetail(user: user)
             } label: {
-                VStack{
-                    Text(user.name)
+                HStack{
+                    Text("\(user.name) -")
                     
                     user.isActive == true ? Text("Online") : Text("Offline")
                         .font(.caption)
-                        .foregroundColor(user.isActive == true ? .green.opacity(0.5) : .secondary)
+//                        .foregroundColor(user.isActive == true ? .green.opacity(0.5) : .secondary)
                 }
+                .clipShape(RoundedRectangle(cornerRadius: 4))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 4)
+                        .stroke(.white)
+                )
             }
         }
     }

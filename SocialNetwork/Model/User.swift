@@ -8,7 +8,7 @@
 import Foundation
 
 struct User: Codable, Identifiable{
-    struct Friends: Codable{
+    struct Friends: Codable, Identifiable{
         let id: String
         let name: String
     }
