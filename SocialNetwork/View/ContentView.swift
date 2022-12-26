@@ -23,35 +23,39 @@ struct ContentView: View {
     }
     
     func fetchData() {
-        let url = URL(string: "https://www.hackingwithswift.com/samples/friendface.json")!
+        let userStruct = [User]()
         
-        let task = URLSession.shared.dataTask(with: url){ data, response, error in
-            if let data = data, let response = response as? HTTPURLResponse{
-                if response.statusCode == 200 {
-                    
-                    let decoder = JSONDecoder()
-//                    let formatter = ISO8601DateFormatter()
-//                    formatter.formatOptions = [.withFullDate]
-//                    decoder.dateDecodingStrategy = .formatted(formatter)
-
-                    do {
-                        let user = try decoder.decode([User].self, from: data)
-                        DispatchQueue.main.async {
-                            self.users = user
-                        }
+        if userStruct.isEmpty{
+            
+            let url = URL(string: "https://www.hackingwithswift.com/samples/friendface.json")!
+            
+            let task = URLSession.shared.dataTask(with: url){ data, response, error in
+                if let data = data, let response = response as? HTTPURLResponse{
+                    if response.statusCode == 200 {
                         
-                    } catch {
-                        print(error)
+                        let decoder = JSONDecoder()
+                        //                    let formatter = ISO8601DateFormatter()
+                        //                    formatter.formatOptions = [.withFullDate]
+                        //                    decoder.dateDecodingStrategy = .formatted(formatter)
+                        
+                        do {
+                            let user = try decoder.decode([User].self, from: data)
+                            DispatchQueue.main.async {
+                                self.users = user
+                            }
+                            
+                        } catch {
+                            print(error)
+                        }
+                    } else {
+                        print("API returned a non-200 response: \(response.statusCode)")
                     }
                 } else {
-                    print("API returned a non-200 response: \(response.statusCode)")
+                    print("No data or invalid response received from the API")
                 }
-            } else {
-                print("No data or invalid response received from the API")
             }
+            task.resume()
         }
-        task.resume()
-        
     }
 }
 

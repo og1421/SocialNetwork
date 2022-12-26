@@ -25,6 +25,12 @@ struct User: Codable, Identifiable{
     let tags: [String]
     let friends: [Friends]
     
+    func isEmpty() -> Bool {
+        if id == "" {
+            return true
+        }
+        return false
+    }
 //    var formattedLaucher: String {
 //        registered?.formatted(date: .abbreviated, time: .omitted) ?? "N/A"
 //    }
