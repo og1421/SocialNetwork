@@ -20,7 +20,7 @@
         <attribute name="isActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="registered" optional="YES" attributeType="String"/>
-        <relationship name="friend" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CachedFriend" inverseName="user" inverseEntity="CachedFriend"/>
+        <relationship name="friend" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CachedFriend" inverseName="user" inverseEntity="CachedFriend"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="id"/>

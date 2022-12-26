@@ -20,10 +20,11 @@
 		8511D7C82956746A00A8F12B /* UserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511D7C72956746A00A8F12B /* UserDetail.swift */; };
 		8511D7CA2957787600A8F12B /* ListLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511D7C92957787600A8F12B /* ListLayout.swift */; };
 		8511D7CE2959DA9900A8F12B /* CachedData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8511D7CC2959DA9900A8F12B /* CachedData.xcdatamodeld */; };
-		8511D7D32959DD6900A8F12B /* CachedUser+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511D7CF2959DD6900A8F12B /* CachedUser+CoreDataClass.swift */; };
-		8511D7D42959DD6900A8F12B /* CachedUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511D7D02959DD6900A8F12B /* CachedUser+CoreDataProperties.swift */; };
-		8511D7D52959DD6900A8F12B /* CachedFriend+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511D7D12959DD6900A8F12B /* CachedFriend+CoreDataClass.swift */; };
-		8511D7D62959DD6900A8F12B /* CachedFriend+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511D7D22959DD6900A8F12B /* CachedFriend+CoreDataProperties.swift */; };
+		8511D7E9295A14FC00A8F12B /* CachedUser+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511D7E5295A14FC00A8F12B /* CachedUser+CoreDataClass.swift */; };
+		8511D7EA295A14FC00A8F12B /* CachedUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511D7E6295A14FC00A8F12B /* CachedUser+CoreDataProperties.swift */; };
+		8511D7EB295A14FC00A8F12B /* CachedFriend+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511D7E7295A14FC00A8F12B /* CachedFriend+CoreDataClass.swift */; };
+		8511D7EC295A14FC00A8F12B /* CachedFriend+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511D7E8295A14FC00A8F12B /* CachedFriend+CoreDataProperties.swift */; };
+		8511D7EE295A1ABD00A8F12B /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511D7ED295A1ABD00A8F12B /* Persistence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,10 +62,11 @@
 		8511D7C72956746A00A8F12B /* UserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetail.swift; sourceTree = "<group>"; };
 		8511D7C92957787600A8F12B /* ListLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListLayout.swift; sourceTree = "<group>"; };
 		8511D7CD2959DA9900A8F12B /* CachedData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CachedData.xcdatamodel; sourceTree = "<group>"; };
-		8511D7CF2959DD6900A8F12B /* CachedUser+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedUser+CoreDataClass.swift"; sourceTree = "<group>"; };
-		8511D7D02959DD6900A8F12B /* CachedUser+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedUser+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		8511D7D12959DD6900A8F12B /* CachedFriend+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedFriend+CoreDataClass.swift"; sourceTree = "<group>"; };
-		8511D7D22959DD6900A8F12B /* CachedFriend+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedFriend+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8511D7E5295A14FC00A8F12B /* CachedUser+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedUser+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		8511D7E6295A14FC00A8F12B /* CachedUser+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedUser+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		8511D7E7295A14FC00A8F12B /* CachedFriend+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedFriend+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		8511D7E8295A14FC00A8F12B /* CachedFriend+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedFriend+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		8511D7ED295A1ABD00A8F12B /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,11 +176,12 @@
 		8511D7CB2959DA7A00A8F12B /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				8511D7CF2959DD6900A8F12B /* CachedUser+CoreDataClass.swift */,
-				8511D7D02959DD6900A8F12B /* CachedUser+CoreDataProperties.swift */,
-				8511D7D12959DD6900A8F12B /* CachedFriend+CoreDataClass.swift */,
-				8511D7D22959DD6900A8F12B /* CachedFriend+CoreDataProperties.swift */,
 				8511D7CC2959DA9900A8F12B /* CachedData.xcdatamodeld */,
+				8511D7E5295A14FC00A8F12B /* CachedUser+CoreDataClass.swift */,
+				8511D7E6295A14FC00A8F12B /* CachedUser+CoreDataProperties.swift */,
+				8511D7E7295A14FC00A8F12B /* CachedFriend+CoreDataClass.swift */,
+				8511D7E8295A14FC00A8F12B /* CachedFriend+CoreDataProperties.swift */,
+				8511D7ED295A1ABD00A8F12B /* Persistence.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -315,14 +318,15 @@
 			files = (
 				8511D7C62956745D00A8F12B /* UserList.swift in Sources */,
 				8511D7CE2959DA9900A8F12B /* CachedData.xcdatamodeld in Sources */,
-				8511D7D42959DD6900A8F12B /* CachedUser+CoreDataProperties.swift in Sources */,
+				8511D7EA295A14FC00A8F12B /* CachedUser+CoreDataProperties.swift in Sources */,
 				8511D7CA2957787600A8F12B /* ListLayout.swift in Sources */,
 				8511D7C82956746A00A8F12B /* UserDetail.swift in Sources */,
-				8511D7D32959DD6900A8F12B /* CachedUser+CoreDataClass.swift in Sources */,
+				8511D7E9295A14FC00A8F12B /* CachedUser+CoreDataClass.swift in Sources */,
 				8511D79329565ED200A8F12B /* ContentView.swift in Sources */,
-				8511D7D62959DD6900A8F12B /* CachedFriend+CoreDataProperties.swift in Sources */,
+				8511D7EE295A1ABD00A8F12B /* Persistence.swift in Sources */,
+				8511D7EC295A14FC00A8F12B /* CachedFriend+CoreDataProperties.swift in Sources */,
 				8511D79129565ED200A8F12B /* SocialNetworkApp.swift in Sources */,
-				8511D7D52959DD6900A8F12B /* CachedFriend+CoreDataClass.swift in Sources */,
+				8511D7EB295A14FC00A8F12B /* CachedFriend+CoreDataClass.swift in Sources */,
 				8511D7C229566A7300A8F12B /* Bundle-Decodable.swift in Sources */,
 				8511D7BE295661D900A8F12B /* User.swift in Sources */,
 			);

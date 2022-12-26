@@ -10,7 +10,10 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var users: [User] = []
-
+    
+    @Environment(\.managedObjectContext) var moc
+    @FetchRequest(sortDescriptors: []) var userData: FetchedResults<CachedUser>
+    
     
     var body: some View {
         NavigationView{
@@ -34,9 +37,6 @@ struct ContentView: View {
                     if response.statusCode == 200 {
                         
                         let decoder = JSONDecoder()
-                        //                    let formatter = ISO8601DateFormatter()
-                        //                    formatter.formatOptions = [.withFullDate]
-                        //                    decoder.dateDecodingStrategy = .formatted(formatter)
                         
                         do {
                             let user = try decoder.decode([User].self, from: data)
