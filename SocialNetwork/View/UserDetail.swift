@@ -11,48 +11,38 @@ struct UserDetail: View {
     let user: User
     
     var body: some View {
-        VStack{
-            Section{
-                HStack{
-                    Text(user.name)
-                        .font(.headline)
-                    
-                    user.isActive == true ? Text("Online") : Text ("Offline")
-                }
-                .clipShape(RoundedRectangle(cornerRadius: 5))
-                .overlay(
-                    RoundedRectangle(cornerRadius: 5)
-                        .stroke(.black)
-                )
-                .padding()
-            }
-            
-            
-            Text("Registered in: \(user.registered)")
-            Text("Age: \(user.age)")
-            Text("Company: \(user.company)")
-            Text("Email: \(user.email)")
-            Text("Address: \(user.address)")
-            
-            Section{
-                Text(user.about)
-                    .padding()
-            } header: {
-                Text("About")
-                    .font(.headline)
-            }
-            Section{
-                Text("Friends: ")
-                    .font(.headline)
-            }
-            
-            ScrollView(.horizontal, showsIndicators: false){
-                HStack{
-                    ForEach(user.friends){ friend in
-                        Text("👷🏼‍♀️\(friend.name)")
+        NavigationView{
+            Form{
+                Section{
+                    VStack(alignment: .leading, spacing: 10){
+                        Text("**Registered in**: \(user.registered)")
+                        Text("**Age**: \(user.age)")
+                        Text("**Company**: \(user.company)")
+                        Text("**Email**: \(user.email)")
+                        Text("**Address**: \(user.address)")
                     }
+                } header: {
+                    Text("Personal info")
+                }
+                Section{
+                    Text(user.about)
+                } header: {
+                    Text("About")
+                }
+                
+                Section{
+                    ScrollView(.horizontal, showsIndicators: false){
+                        HStack{
+                            ForEach(user.friends){ friend in
+                                Text("👷🏼‍♀️\(friend.name)")
+                            }
+                        }
+                    }
+                }header: {
+                    Text("Friends")
                 }
             }
         }
+        .navigationTitle(user.name)
     }
 }
